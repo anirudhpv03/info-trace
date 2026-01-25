@@ -1,0 +1,156 @@
+:root {
+    --primary-gradient: linear-gradient(135deg, #2563eb, #1d4ed8);
+    --glass-bg: #ffffff;
+    --glass-border: rgba(37, 99, 235, 0.2);
+    --text-primary: #1f2937;
+    --text-secondary: rgba(31, 41, 55, 0.7);
+    --neon-cyan: #2563eb;
+    --neon-pink: #ef4444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+    color: var(--text-primary);
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-top: 10px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: var(--glass-bg);
+    border: 2px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: var(--neon-cyan);
+}
+
+.card-title {
+    font-size: 13px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.card-value {
+    font-family: monospace;
+    background: rgba(37, 99, 235, 0.05);
+    padding: 14px;
+    border-radius: 12px;
+    min-height: 45px;
+    word-wrap: break-word;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.info-sections {
+    margin-top: 60px;
+}
+
+.info-text {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+}
+
+.info-text ul {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.info-text li {
+    margin-bottom: 8px;
+}
+
+.warning-text {
+    border-left: 4px solid var(--neon-pink);
+    padding-left: 15px;
+}
+
+.button-group-bottom {
+    margin-top: 40px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 14px 28px;
+    border-radius: 12px;
+    border: 2px solid var(--neon-cyan);
+    background: var(--primary-gradient);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    border-color: var(--neon-pink);
+}
+
+footer {
+    margin-top: 70px;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    .grid {
+        gap: 15px;
+    }
+
+    button {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}

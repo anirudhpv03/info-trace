@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Info‑Trace</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Info‑Trace</h1>
+        <p class="subtitle">
+            Only real, device‑reported data
+        </p>
+    </header>
+
+    <div class="grid">
+
+        <!-- Identity -->
+        <div class="card"><div class="card-title">🌐 Public IP</div><div class="card-value" id="ip">Loading…</div></div>
+
+        <!-- Device -->
+        <div class="card"><div class="card-title">💻 Platform</div><div class="card-value" id="platform">Loading…</div></div>
+        <div class="card"><div class="card-title">📱 Device Type</div><div class="card-value" id="deviceType">Loading…</div></div>
+        <div class="card"><div class="card-title">🧠 CPU Cores</div><div class="card-value" id="cores">Loading…</div></div>
+        <div class="card"><div class="card-title">👆 Touch Support</div><div class="card-value" id="touch">Loading…</div></div>
+
+        <!-- Browser -->
+        <div class="card"><div class="card-title">🌍 Language</div><div class="card-value" id="language">Loading…</div></div>
+        <div class="card"><div class="card-title">🌐 Languages</div><div class="card-value" id="languages">Loading…</div></div>
+        <div class="card"><div class="card-title">⏰ Browser Timezone</div><div class="card-value" id="timezone">Loading…</div></div>
+
+        <!-- Screen -->
+        <div class="card"><div class="card-title">📐 Screen Resolution</div><div class="card-value" id="screen">Loading…</div></div>
+        <div class="card"><div class="card-title">🎨 Color Depth</div><div class="card-value" id="color">Loading…</div></div>
+        <div class="card"><div class="card-title">🔍 Pixel Ratio</div><div class="card-value" id="pixelRatio">Loading…</div></div>
+        <div class="card"><div class="card-title">📏 Available Screen Size</div><div class="card-value" id="screenAvail">Loading…</div></div>
+
+        <!-- Fingerprints -->
+        <div class="card full-width"><div class="card-title">🎨 Canvas Fingerprint</div><div class="card-value" id="canvasFP">Loading…</div></div>
+        <div class="card full-width"><div class="card-title">🖥 WebGL Info</div><div class="card-value" id="webgl">Loading…</div></div>
+        <div class="card full-width"><div class="card-title">🧭 User Agent</div><div class="card-value" id="ua">Loading…</div></div>
+
+    </div>
+
+    <div class="button-group-bottom">
+        <button onclick="collect()">Gather Info</button>
+        <button onclick="exportJSON()">Export JSON</button>
+        <button onclick="clearData()">Clear</button>
+    </div>
+
+    <div class="info-sections">
+        <div class="card full-width">
+            <div class="card-title">📖 Strict Mode Explanation</div>
+            <div class=" info-text">
+                This page displays <strong>only information directly reported by your device or browser</strong>.
+                No location inference, no network estimation, and no tracking is performed.
+                <br><br>
+                This is the exact baseline of data that most websites can read instantly using JavaScript.
+                <br><br>
+                This is how websites used to identify you even when u connect using other network or IP address.
+                <br><br>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2025 Info‑Trace • Educational Use Only</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
